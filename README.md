@@ -9,8 +9,8 @@ This is an Express API Boilerplate, to help someone building an API.
 - [x] GET /examples
 - [x] GET /examples/:id
 - [ ] POST /examples
-- [ ] PUT /examples
-- [ ] DELETE /examples
+- [ ] PUT /examples/:id
+- [ ] DELETE /examples/:id
 
 ## Architecture
 
