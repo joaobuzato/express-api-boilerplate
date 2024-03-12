@@ -14,4 +14,6 @@ export default class ExampleController {
   async getAll(): Promise<Example[]> {
     return await this.service.getAll();
   }
-}
+  async getById(id:number): Promise<Example>{
+    return await this.service.getById(id);
+  }}

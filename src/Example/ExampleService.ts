@@ -10,4 +10,7 @@ export default class ExampleService {
   async getAll(): Promise<Example[]> {
     return await this.repository.getAll();
   }
+  async getById(id:number): Promise<Example> {
+    return await this.repository.getById(id);
+  }
 }

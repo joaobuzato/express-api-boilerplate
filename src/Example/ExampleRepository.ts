@@ -13,4 +13,10 @@ export default class ExampleRepository {
     );
     return examples;
   }
+  async getById(id:number): Promise<Example> {
+    const examples = await this.database.query<Example> (
+      "SELECT * FROM example_database.example WHERE id = ?", [id]
+    );
+    return examples[0];
+  }
 }

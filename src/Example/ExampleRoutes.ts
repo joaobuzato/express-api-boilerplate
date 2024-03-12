@@ -10,4 +10,14 @@ ExampleRouter.get("/examples", async (req, res) => {
   return res.status(200).json(examples);
 });
 
+ExampleRouter.get("/examples/:id", async (req, res) => {
+  const id = req.params.id;
+  if (!id){
+    res.status(400).json("BAD REQUEST")
+  }
+  const examples = await controller.getById(Number(id));
+
+  return res.status(200).json(examples);
+});
+
 export default ExampleRouter;
