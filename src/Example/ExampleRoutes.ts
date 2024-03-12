@@ -11,13 +11,16 @@ ExampleRouter.get("/examples", async (req, res) => {
 });
 
 ExampleRouter.get("/examples/:id", async (req, res) => {
-  const id = req.params.id;
-  if (!id){
-    res.status(400).json("BAD REQUEST")
+  const id = Number(req.params.id);
+  if (!id || isNaN(id)){
+    return res.status(400).send("BAD REQUEST")
   }
-  const examples = await controller.getById(Number(id));
-
-  return res.status(200).json(examples);
+  const example = await controller.getById(id);
+  if (!example) {
+    return res.status(404).send("NOT FOUND")
+  }
+    return res.status(200).json(example);
 });
+
 
 export default ExampleRouter;
