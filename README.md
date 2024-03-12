@@ -7,7 +7,7 @@ This is an Express API Boilerplate, to help someone building an API.
 ## Routes
 
 - [x] GET /examples
-- [ ] GET /examples/:id
+- [x] GET /examples/:id
 - [ ] POST /examples
 - [ ] PUT /examples
 - [ ] DELETE /examples
