@@ -14,7 +14,7 @@ This is an Express API Boilerplate, to help someone building an API.
 
 ## Architecture
 
-- [ ] Repository
+- [x] Repository
 - [x] Database Abstraction SQL
 - [ ] Service
 - [ ] Controller

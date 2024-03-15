@@ -8,6 +8,7 @@
     "nodemon": "^3.1.0",
     "npx": "^10.2.2",
     "quick-migrate-lib": "^1.0.1",
+    "ts-node": "^10.9.2",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   },
@@ -17,8 +18,7 @@
   "main": "dist/src/app.js",
   "scripts": {
     "test": "jest",
-    "prestart": "npm run build",
-    "start": "nodemon dist/src/app.js",
+    "start": "ts-node src/app.ts",
     "migrate": "tsx migrate.ts",
     "build": "tsc --build"
   },
