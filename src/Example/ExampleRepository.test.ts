@@ -14,11 +14,16 @@ describe("ExampleRepository", () => {
       { id: 2, name: "example2" },
       { id: 3, name: "example3" },
     ]);
+
     const examples = await repository.getAll();
+
     expect(examples).toEqual([
       { id: 1, name: "example1" },
       { id: 2, name: "example2" },
       { id: 3, name: "example3" },
     ]);
+    expect(database.query).toHaveBeenCalledWith(
+      "SELECT * FROM example_database.example"
+    );
   });
 });
