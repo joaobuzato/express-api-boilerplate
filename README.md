@@ -22,7 +22,7 @@ This is an Express API Boilerplate, to help someone building an API.
 
 ## Tests
 
-- [ ] Unit tests for Repository
+- [x] Unit tests for Repository
 - [ ] Unit tests for Service
 - [ ] Unit tests for Controller
 - [ ] Integration API tests
