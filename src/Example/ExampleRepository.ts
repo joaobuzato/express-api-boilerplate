@@ -20,22 +20,40 @@ export default class ExampleRepository {
     );
     return examples[0];
   }
-  async create(example: Example): Promise<void> {
-    await this.database.query(
-      "INSERT INTO example_database.example (name) VALUES (?)",
-      [example.name]
-    );
+  async create(example: Example): Promise<boolean> {
+    try {
+      await this.database.query(
+        "INSERT INTO example_database.example (name) VALUES (?)",
+        [example.name]
+      );
+      return true;
+    } catch (e) {
+      console.log(e);
+      return false;
+    }
   }
-  async update(example: Example): Promise<void> {
-    await this.database.query(
-      "UPDATE example_database.example SET name = ? WHERE id = ?",
-      [example.name, example.id]
-    );
+  async update(example: Example): Promise<boolean> {
+    try {
+      await this.database.query(
+        "UPDATE example_database.example SET name = ? WHERE id = ?",
+        [example.name, example.id]
+      );
+      return true;
+    } catch (e) {
+      console.log(e);
+      return false;
+    }
   }
-  async delete(id: number): Promise<void> {
-    await this.database.query(
-      "DELETE FROM example_database.example WHERE id = ?",
-      [id]
-    );
+  async delete(id: number): Promise<boolean> {
+    try {
+      await this.database.query(
+        "DELETE FROM example_database.example WHERE id = ?",
+        [id]
+      );
+      return true;
+    } catch (e) {
+      console.log(e);
+      return false;
+    }
   }
 }

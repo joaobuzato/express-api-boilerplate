@@ -14,6 +14,16 @@ export default class ExampleController {
   async getAll(): Promise<Example[]> {
     return await this.service.getAll();
   }
-  async getById(id:number): Promise<Example>{
+  async getById(id: number): Promise<Example> {
     return await this.service.getById(id);
-  }}
+  }
+  async create(example: Example): Promise<boolean> {
+    return await this.service.create(example);
+  }
+  async update(example: Example): Promise<boolean> {
+    return await this.service.update(example);
+  }
+  async delete(id: number): Promise<boolean> {
+    return await this.service.delete(id);
+  }
+}
