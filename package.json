@@ -16,10 +16,10 @@
   "name": "express-api-boilerplate",
   "description": "This is an Express API Boilerplate, to help someone building an API.",
   "version": "1.0.0",
-  "main": "dist/src/app.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "jest",
-    "start": "ts-node src/app.ts",
+    "start": "ts-node src/index.ts",
     "migrate": "tsx migrate.ts",
     "build": "tsc --build"
   },
