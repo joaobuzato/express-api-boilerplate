@@ -8,24 +8,24 @@ This is an Express API Boilerplate, to help someone building an API.
 
 - [x] GET /examples
 - [x] GET /examples/:id
-- [ ] POST /examples
-- [ ] PUT /examples/:id
-- [ ] DELETE /examples/:id
+- [x] POST /examples
+- [x] PUT /examples/:id
+- [x] DELETE /examples/:id
 
 ## Architecture
 
 - [x] Repository
 - [x] Database Abstraction SQL
-- [ ] Service
-- [ ] Controller
-- [ ] Routes
+- [x] Service
+- [x] Controller
+- [x] Routes
 
 ## Tests
 
 - [x] Unit tests for Repository
-- [ ] Unit tests for Service
-- [ ] Unit tests for Controller
-- [ ] Integration API tests
+- [x] Unit tests for Service
+- [x] Unit tests for Controller
+- [x] Integration API tests
 
 ## Utilitaries
 
